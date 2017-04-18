@@ -123,22 +123,15 @@ while runagain=='y' :
 		print ()
 		print ('Abort (5):', list2.count(5))
 		print ('Hit (6):', list2.count(6))
-		#Calculate net damage
-		damage1 = list2.count(6)
-		if damage1 > d1:
-			damage1 = d1
-		damage2 = list1.count(6)
-		if damage2 > d2:
-			damage2 = d2
 		#Calculate net aborts
 		aborts=list2.count(5)-list1.count(5)
 		if aborts < 0:
 			aborts=0
 		#Print ADR damage and net block reveals
 		print ()
-		print ('===========ADR results===========')
+		print ('=========ADR results=========')
 		print ()
-		print ('Active Player takes', damage1, 'damage. Passive Player takes', damage2, 'damage.')
+		print ('Active Player takes', list2.count(6), 'damage. Passive Player takes', list1.count(6), 'damage.')
 		print ('Active Player reveals', d1-list2.count(6)-aborts, 'opponent block(s).')
 
 	#Artillery results
